@@ -94,8 +94,8 @@
         /* Main Chat
            Different keys from game keys */
         ChatEngine = ChatEngineCore.create({
-            publishKey: 'main_chat_pub_key',
-            subscribeKey: 'main_chat_sub_key'
+            publishKey: 'pub-c-8b91710b-d983-4349-a0cf-91c28d053ed9',
+            subscribeKey: 'sub-c-8ccfff4f-036f-4cdb-976c-6e43acfd770a'
         }, {
             globalChannel: [game]
         });
@@ -103,8 +103,8 @@
         /* Guess Word Chat
            Different keys from above */
         GuessWordChatEngine = ChatEngineCore.create({
-            publishKey: 'guess_word_chat_pub_key',
-            subscribeKey: 'guess_word_chat_sub_key'
+            publishKey: 'pub-c-4c87fccc-694b-4759-9d74-246ac5b08dc5',
+            subscribeKey: 'sub-c-350f8e0b-3bbb-4510-881c-7b854af21775'
         }, {
             globalChannel: [game]
         });
