@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess the Drawing!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>       
+    <div class="main">
+        <p class="player-score" id="score"></p>
+        <p class="opponents-score" id="opponentScore"></p>
+        <p class="guess-word" id="guessWord"></p>
+        <p class="tries-left" id="triesLeft"></p>
+
+        <canvas id="drawCanvas" width="1180" height="470" style="cursor: default;"></canvas>
+        <div class="chat-container">
+            <div class="content">
+                <div class="chat-log" id="chatLog"></div>
+                <div class="chat-input">
+                    <textarea
+                        id="chatInput"
+                        placeholder="Chat here..."
+                        maxlength="1000"
+                    ></textarea>
+                </div>
+            </div>
+        </div>        
+        
+        <div class="guess-word-chat-container">
+            <div class="guess-word-chat-content">
+                <div class="guess-word-chat-log" id="guessWordChatLog"></div>
+                <div class="guess-word-chat-input">
+                    <textarea
+                        id="guessWordChatInput"
+                        placeholder="Guess the drawing. Enter word here..."
+                        maxlength="1000"
+                    ></textarea>
+                </div>
+            </div>
+        </div>
+    
+        <section id="colorSwatch">
+            <input type="radio" name="color" id="color01" data-color="gold" checked><label for="color01"></label> 
+            <input type="radio" name="color" id="color02" data-color="darkorange">	<label for="color02"></label>  
+            <input type="radio" name="color" id="color03" data-color="navy">		<label for="color03"></label>  
+            <input type="radio" name="color" id="color04" data-color="yellowgreen">	<label for="color04"></label>  
+            <input type="radio" name="color" id="color05" data-color="firebrick">	<label for="color05"></label>  
+            <input type="radio" name="color" id="color06" data-color="black">	    <label for="color06"></label> 
+            <button class="clear-button" id="clearCanvasButton">Clear</button>
+        </section>
+    </div>    
+
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chat-engine@0.9.18/dist/chat-engine.min.js"></script> 
+    <script src="lobby.js"></script>
+    <script src="guessDrawing.js"></script>
+</body>
+</html>

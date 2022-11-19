@@ -1,0 +1,230 @@
+body {
+    height: 100%;
+    width: 75%;
+      margin: 1em;
+      margin-left: 0.9em;
+      background: #2C2F33;
+      color: white;
+  }
+  
+  .main{
+      display: inline-block;
+  }
+  
+  .player-score{
+      font-size: 1.2rem;
+      font-family: Helvetica;
+      text-align: center;
+      display: inline-block;
+      margin-block-start: 0.5em;
+      margin-block-end: 0.5em;
+      margin-left: 1.2em;
+  }
+  
+  .opponents-score{
+      font-size: 1.2rem;
+      font-family: Helvetica;
+      text-align: center;
+      display: inline-block;
+      margin-block-start: 0.5em;
+      margin-block-end: 0.5em;
+      margin-left: 2em;
+  }
+  
+  .guess-word{
+      font-size: 1.2rem;
+      font-family: Helvetica;
+      text-align: center;
+      display: inline-block;
+      margin-block-start: 0.5em;
+      margin-block-end: 0.5em;
+      margin-left: 9em;
+  }
+  
+  .tries-left{
+      font-size: 1.2rem;
+      font-family: Helvetica;
+      text-align: center;
+      float: right;
+      margin-right: 0.5em;
+      margin-block-start: 0.5em;
+      margin-block-end: 0.5em;
+  }
+  
+  #drawCanvas {
+    position: relative;
+      top: 0;
+      left: 0;
+      margin-top: -1.3em;
+  }
+  
+  #colorSwatch {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+  }
+  input[type=radio] {
+      margin: 0;
+      display: none;
+      width: 0;
+  }
+  input[type=radio]:checked + label::after {
+      content: '\2712';
+      position: absolute;
+      left: 8px;
+  }
+  label {
+      display: inline-block; 
+      width: 48px; height: 48px; 
+      position: relative;
+      padding-right: 5px;
+      border-radius: 50%;
+      text-shadow: 1px 1px 2px #000;
+      color: #fff;
+      font-size: 32px;
+      line-height: 46px;
+  }
+  label[for=color01] {background: gold;}
+  label[for=color02] {background: darkorange;}
+  label[for=color03] {background: navy;}
+  label[for=color04] {background: yellowgreen;}
+  label[for=color05] {background: firebrick;}
+  label[for=color06] {background: black;}
+  
+  @media all and (orientation: landscape) {
+      canvas {
+          display: inline-block;
+          margin-right: 10px;
+      }
+      #colorSwatch {
+          display: inline-block;
+          width: 50px;
+          top: 95px;
+          right: 15px;
+      }
+      .alt2 #colorSwatch {
+          top: 30px;
+      }
+  }
+  
+  .clear-button{
+      background-color: white;
+      color: black;
+      display: inline-block; 
+      width: 53px; height: 50px; 
+      position: relative;
+      padding-right: 5px;
+      border-radius: 50%;
+      font-size: 15px;
+      text-align: center;
+      margin-top: 1em;
+  }
+  
+  .chat-container {
+      display: block;
+      width: 64%;
+      height: inherit;
+      float: right;
+      margin-right: 0.6em;
+      overflow: auto;
+      border: 1px solid white;
+      background-color: #7289DA;
+      text-align: left;
+      font-family: Helvetica;
+  }
+  .chat-container .content {
+      display: table;
+      width: 100%;
+      height: 100%;
+  
+  }
+  .chat-message {
+      max-width: 900px;
+      margin: 10px auto;
+  }
+  .chat-log {
+      display: block;
+      height: 120px;
+      width: 98%;
+      padding: 0px 10px;
+      margin: 10px auto 0px auto;
+      box-sizing: border-box;
+      overflow-y: scroll;
+      background-color:#7289DA;
+  }
+  .chat-log::-webkit-scrollbar {
+      display: none;
+  }
+  .chat-input {
+      display: table-row;
+      width: 100%;
+      height: 26px;
+  }
+  .chat-input textarea {
+      display: block;
+      width: 96%;
+      height: 38px;
+      padding: 5px;
+      margin: 10px auto;
+      box-sizing: border-box;
+      line-height: 20pt;
+      resize: none;
+      outline: none;
+      font-size: 14px;
+      border: solid 1px #888888;
+      border-radius: 3px;
+  }
+  
+  .guess-word-chat-container {
+      display: block;
+      width: 33%;
+      height: inherit;
+      float: left;
+      margin-left: 1.2em; 
+      overflow: auto;
+      border: 1px solid white;
+      background-color: #7289DA;
+      text-align: left;
+      font-family: Helvetica;
+  }
+  .guess-word-chat-container .guess-word-chat-content {
+      display: table;
+      width: 100%;
+      height: 100%;
+  
+  }
+  .guess-word-chat-message {
+      max-width: 900px;
+      margin: 10px auto;
+  }
+  .guess-word-chat-log{
+      display: block;
+      height: 120px;
+      width: 98%;
+      padding: 0px 10px;
+      margin: 10px auto 0px auto;
+      box-sizing: border-box;
+      overflow-y: scroll;
+  }
+  .guess-word-chat-log::-webkit-scrollbar {
+      display: none;
+  }
+  .guess-word-chat-input {
+      display: table-row;
+      width: 100%;
+      height: 26px;
+  }
+  .guess-word-chat-input textarea {
+      display: block;
+      width: 96%;
+      height: 38px;
+      padding: 5px;
+      margin: 10px auto;
+      box-sizing: border-box;
+      line-height: 20pt;
+      resize: none;
+      outline: none;
+      font-size: 14px;
+      border: solid 1px #888888;
+      border-radius: 3px;
+  }
